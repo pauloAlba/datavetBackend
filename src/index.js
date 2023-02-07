@@ -9,10 +9,6 @@ app.use(router)
 
 const port = "443"
 
-app.get("/", (req, res) => {
-  res.send("olá, mundo!");
-});
+app.set('port', process.env.PORT || 3000);
+app.listen(3000, ()=> console.log("Api Rodando."))
 
-app.set("port", process.env.PORT || 3000)
-
-app.listen("3000", () => console.log("servidor rodando"));
