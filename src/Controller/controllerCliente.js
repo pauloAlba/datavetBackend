@@ -6,7 +6,7 @@ export async function insertCliente(req, res) {
   let cliente = req.body;
   openDb().then((db) => {
     db.run(
-      "INSERT INTO Clientes (nomeTutor, cpf, telefone, endereco, indicacao, nomePaciente, expecie, raca, dataNascimento, castrado, clinicoResponsavel, telefoneClinco) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
+      "INSERT INTO Clientes (nomeTutor, cpf, telefone, endereco, indicacao, nomePaciente, especie, raca, dataNascimento, castrado, clinicoResponsavel, telefoneClinco) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
       [
         cliente.nomeTutor,
         cliente.cpf,
@@ -31,7 +31,7 @@ export async function insertCliente(req, res) {
 export async function updateCliente(req, res){
   let cliente = req.body
   openDb().then((db)=>{
-    db.run("UPDATE Clientes SET nomeTutor=?, cpf=?, telefone=?, endereco=?, indicacao=?, nomePaciente=?, expecie=?, raca=?, dataNascimento=?, castrado=?, clinicoResponsavel=?, telefoneClinco=? WHERE id=?",[
+    db.run("UPDATE Clientes SET nomeTutor=?, cpf=?, telefone=?, endereco=?, indicacao=?, nomePaciente=?, especie=?, raca=?, dataNascimento=?, castrado=?, clinicoResponsavel=?, telefoneClinco=? WHERE id=?",[
         cliente.nomeTutor,
         cliente.cpf,
         cliente.telefone,
