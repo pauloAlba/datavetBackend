@@ -1,6 +1,6 @@
 # datavetBackend
 
-<h2> URL BASE </h2>
+<h2> URL base </h2>
 
 <p>https://datavetbackend.onrender.com</p>
 <br/>
